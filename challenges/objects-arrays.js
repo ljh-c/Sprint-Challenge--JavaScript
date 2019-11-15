@@ -89,7 +89,14 @@ const contactInfo = graduates.map(alum => `${alum.first_name} ${alum.email}`);
 console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called unisWithUni that contains them all. This will be an array of objects. Log the result. */
-const unisWithUni = graduates.filter(alum => alum.university.includes('Uni'));
+
+let unisWithUni = [];
+
+// array of graduate objects that have a university with "Uni" in the name
+let filteredUnis = graduates.filter(alum => alum.university.includes('Uni'));
+
+// array of objects that only have university property
+filteredUnis.forEach(alum => unisWithUni.push({university: alum.university}));
 console.log(unisWithUni);
 
 
