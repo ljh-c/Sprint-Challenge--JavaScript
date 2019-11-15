@@ -26,11 +26,11 @@ console.log(cuboid.surfaceArea()); // 130
 class CubeMaker extends CuboidMaker {
     constructor(side_length) {
         // new cube will have length, width, height of the same value, side_length
-        // however, new cube will not actually have a property called side_length
+        // new cube will NOT have a property called side_length
         super(side_length, side_length, side_length);
     }
-    // below is overriding methods inherited from CuboidMaker
-    // however, the below methods could be commented out 
+    // below overrides methods inherited from CuboidMaker
+    // however, the below methods could be commented out. the parent's formulas still work
     volume() {
         return Math.pow(this.width, 3);
     }
